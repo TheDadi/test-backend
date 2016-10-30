@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bcrypt": "registry:npm/bcrypt#0.8.0+20161010165625",
+    "mongoose": "registry:npm/mongoose#4.3.5+20160628072220"
+  },
+  "globalDependencies": {
+    "node": "registry:dt/node#6.0.0+20161019125345",
+    "oauth2-server": "registry:dt/oauth2-server#0.0.0+20160317120654"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "test-backend",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Typescript, Express, Oauth2-server, Routing-controllers",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "TheDadi",
+    "email": "difada1@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheDadi/test-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheDadi/test-backend/issues"
+  },
+  "tags": [
+    "express",
+    "typescript-express",
+    "routing-controllers",
+    "oauth2-server"
+  ],
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "4.3.5",
+    "multer": "^1.1.0",
+    "oauth2-server": "^2.4.1",
+    "reflect-metadata": "^0.1.3",
+    "routing-controllers": "^0.6.3",
+    "typedi": "^0.4.2"
+  },
+  "devDependencies": {
+    "typescript": "2.0.6"
+  }
+}
