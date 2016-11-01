@@ -1,11 +1,13 @@
 {
   "dependencies": {
     "bcrypt": "registry:npm/bcrypt#0.8.0+20161010165625",
-    "express": "registry:npm/express#4.14.0+20160925001530",
+    "body-parser": "registry:npm/body-parser#1.15.2+20160815132839",
     "mongoose": "registry:npm/mongoose#4.3.5+20160628072220"
   },
   "globalDependencies": {
+    "express": "registry:dt/express#4.0.0+20160708185218",
     "node": "registry:dt/node#6.0.0+20161019125345",
-    "oauth2-server": "registry:dt/oauth2-server#0.0.0+20160317120654"
+    "oauth2-server": "registry:dt/oauth2-server#0.0.0+20160317120654",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157"
   }
 }

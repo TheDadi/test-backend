@@ -1,5 +1,6 @@
 import "reflect-metadata";
-import {createExpressServer, useContainer, useExpressServer} from "routing-controllers";
+import {createExpressServer, useContainer} from "routing-controllers";
+import * as bodyParser from "body-parser";
 import {Container} from "typedi";
 import  * as oauthserver from "oauth2-server";
 import models from "./model/index"
@@ -16,6 +17,9 @@ import "./controllers/UserController";
 const app = createExpressServer({ // alternatively you can use useExpressServer with your own preconfigured express server
     // you also can do: controllerDirs: [__dirname + "/controllers"]
 });
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // run express app
 app.listen(3000);

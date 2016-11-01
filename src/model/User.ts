@@ -49,7 +49,7 @@ export function getUser(email, password, cb) {
 }
 
 export function authenticate(email, password, cb) {
-    this.findOne({email: email}, (err, user: IUser) => {
+    User.findOne({email: email}, (err, user: IUser) => {
         if (err || !user) return cb(err);
         cb(null, compareSync(password, user.hashed_password) ? user : null);
     });
