@@ -4,7 +4,7 @@ import {hashSync} from "bcrypt";
 import {compareSync} from "bcrypt";
 
 
-export interface IUser extends Document {
+export interface IUser {
     email: string;
     hashed_password: string;
     password_reset_token: string;
@@ -13,13 +13,17 @@ export interface IUser extends Document {
     lastname: string;
 }
 
-export const UserSchema:Schema = new Schema({
+export interface IUserModel extends IUser, Document {
+
+}
+
+export const UserSchema: Schema = new Schema({
     email: {type: String, unique: true, required: true},
     hashed_password: {type: String, required: true},
     password_reset_token: {type: String, unique: true},
     reset_token_expires: Date,
     firstname: String,
-    lastname: String
+    lastname: String,
 });
 
 function hashPassword(password) {
@@ -45,10 +49,10 @@ export function getUser(email, password, cb) {
 }
 
 export function authenticate(email, password, cb) {
-    this.findOne({email: email}, (err, user:IUser) => {
+    this.findOne({email: email}, (err, user: IUser) => {
         if (err || !user) return cb(err);
         cb(null, compareSync(password, user.hashed_password) ? user : null);
     });
 }
 
-export const User:Model<IUser> = model<IUser>("Users", UserSchema);
+export const User: Model<IUserModel> = model<IUserModel>("Users", UserSchema);

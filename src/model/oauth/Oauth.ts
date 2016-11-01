@@ -7,7 +7,7 @@ import {getRefreshToken} from "./RefreshToken";
 import {saveRefreshToken} from "./RefreshToken";
 import {getClient} from "./Client";
 import {grantTypeAllowed} from "./Client";
-import {getUser} from "./User";
+import {getUser} from "../User";
 
 
 

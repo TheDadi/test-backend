@@ -3,13 +3,14 @@ import {createExpressServer, useContainer, useExpressServer} from "routing-contr
 import {Container} from "typedi";
 import  * as oauthserver from "oauth2-server";
 import models from "./model/index"
+
 // setup routing-controllers to use typedi container. You can use any container here
 useContainer(Container);
 
 // now import all our controllers. alternatively you can specify controllerDirs in routing-controller options
 import "./controllers/CategoryController";
 import "./controllers/PostController";
-
+import "./controllers/UserController";
 
 // create express server
 const app = createExpressServer({ // alternatively you can use useExpressServer with your own preconfigured express server
@@ -18,6 +19,7 @@ const app = createExpressServer({ // alternatively you can use useExpressServer 
 
 // run express app
 app.listen(3000);
+
 
 app.oauth = oauthserver({
     model: models.Oauth,

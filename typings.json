@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bcrypt": "registry:npm/bcrypt#0.8.0+20161010165625",
+    "express": "registry:npm/express#4.14.0+20160925001530",
     "mongoose": "registry:npm/mongoose#4.3.5+20160628072220"
   },
   "globalDependencies": {
