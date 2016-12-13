@@ -38,3 +38,5 @@ app.get('oauth/authorise', (req) =>{});
 app.use(app.oauth.errorHandler());
 
 console.log("Server is up and running at port 3000");
+
+import 'reflect'
